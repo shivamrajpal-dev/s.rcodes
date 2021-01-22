@@ -60,8 +60,8 @@ ProjectsPage2.addEventListener("mouseover", () => {
   });
 });
 contactPage.addEventListener("mouseover", () => {
-  mouseCursor.style.borderColor = "var(--blue)";
-  smallCursor.style.borderColor = "var(--pink)";
+  mouseCursor.style.borderColor = "var(--pink)";
+  smallCursor.style.borderColor = "var(--blue)";
   mouseHoverclass = "grow";
   navLinks.forEach((link) => {
     link.style.color = "var(--blue)";

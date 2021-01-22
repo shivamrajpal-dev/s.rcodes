@@ -85,7 +85,7 @@
 }
 .grow {
   transform: scale(3.3);
-  background: var(--blue);
+  background: var(--pink);
   border-radius: 0;
   width: 2rem;
   height: 1rem;
@@ -111,6 +111,7 @@ nav .logo a {
 }
 .navLinks {
   color: var(--cream);
+  transition: 0.5s;
 }
 
 nav ul {
@@ -142,7 +143,7 @@ nav ul li a {
   right: -10%;
   animation: circular 20s infinite;
   animation-timing-function: linear;
-  width: 30rem;
+  width: 30%;
 }
 
 @keyframes circular {
@@ -206,7 +207,7 @@ nav ul li a {
   }
 }
 .tagLine {
-  font-size: 3.7rem;
+  font-size: 3.3rem;
   color: var(--cream);
   width: 70%;
   letter-spacing: 0.5rem;
@@ -351,4 +352,7 @@ nav ul li a {
   width: 100vw;
   background-color: var(--cream);
   scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
