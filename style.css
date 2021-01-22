@@ -233,20 +233,92 @@ nav ul li a {
   height: 100vh;
   width: 100vw;
   background-color: var(--pink);
-  background: var(--pink) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
+  background: var(--pink);
   overflow: hidden;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.projects-page {
-  height: 200vh;
+.aboutContainer {
+  height: 60%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  color: var(--blue);
+}
+.whyContainer {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.whyContainer h2 {
+  font-size: 3rem;
+}
+.whyContainer p {
+  font-size: 1.7rem;
+  width: 50%;
+}
+.processContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.process {
+  width: 25%;
+}
+.process h5 {
+  font-size: 1.7rem;
+}
+.process p {
+  margin-top: 10%;
+  font-size: 1.2rem;
+}
+.project-page {
+  height: 100vh;
   width: 100vw;
   background-color: var(--blue);
   position: relative;
+}
+.projectContainer {
+  width: 90%;
+  height: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.projectContainer .left {
+  width: 50%;
+  height: 100%;
+}
+.projectContainer .right {
+  width: 50%;
+  height: 100%;
+}
+.projectContainer .projectimg {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projectContainer .projectimg img {
+  width: 90%;
+}
+/* .projectDescription {
+  text-align: center;
+} */
+.projectDescription h3 {
+  font-size: 3rem;
+  color: var(--pink);
+  margin-top: 20%;
+  text-align: center;
+}
+.projectDescription p {
+  font-size: 1.4rem;
+  color: var(--cream);
+  margin-top: 10%;
+  text-align: justify;
 }
 .contact-page {
   height: 50vh;
