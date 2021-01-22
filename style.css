@@ -24,25 +24,27 @@
   font-size: 4rem;
 }
 .cursor {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  border-top-left-radius: 0%;
   border: 2px solid var(--cream);
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(45deg);
   z-index: 1;
   pointer-events: none;
-  transition: all 0.3s ease;
+  transition: all 0.6s ease;
   transition-property: background, transform;
   transform-origin: 100% 100%;
 }
 .smallCursor {
   content: "";
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border: 7px solid var(--pink);
   position: absolute;
   border-radius: 50%;
+  border-top-left-radius: 0%;
   animation: cursoranimation 1.2s infinite;
   top: -2px;
   left: -2px;
@@ -64,14 +66,32 @@
   }
 }
 .link-grow {
-  transform: scale(2);
+  transform: scale(3.3);
   background: var(--pink);
+  border-radius: 0;
+  width: 2rem;
+  height: 1rem;
+  border-radius: 20%;
+  transform-origin: 100% 100%;
 }
 .cursor-bg {
   background: var(--cream);
-  transform: scale(2);
+  transform: scale(3.3);
+  border-radius: 0;
+  width: 2rem;
+  height: 1rem;
+  border-radius: 20%;
+  transform-origin: 100% 100%;
 }
-
+.grow {
+  transform: scale(3.3);
+  background: var(--blue);
+  border-radius: 0;
+  width: 2rem;
+  height: 1rem;
+  border-radius: 20%;
+  transform-origin: 100% 100%;
+}
 nav {
   position: fixed;
   top: 0;
@@ -82,7 +102,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--cream);
 }
 nav .logo {
   font-size: 2.2rem;
@@ -93,6 +112,7 @@ nav .logo a {
 .navLinks {
   color: var(--cream);
 }
+
 nav ul {
   font-size: 1.2rem;
   list-style-type: none;
@@ -275,7 +295,13 @@ nav ul li a {
   margin-top: 10%;
   font-size: 1.2rem;
 }
-.project-page {
+.project-page1 {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--blue);
+  position: relative;
+}
+.project-page2 {
   height: 100vh;
   width: 100vw;
   background-color: var(--blue);
@@ -321,7 +347,7 @@ nav ul li a {
   text-align: justify;
 }
 .contact-page {
-  height: 50vh;
+  height: 100vh;
   width: 100vw;
   background-color: var(--cream);
   scroll-snap-align: start;

@@ -3,7 +3,9 @@ let navLinks = document.querySelectorAll(".navLinks");
 let smallCursor = document.querySelector(".smallCursor");
 let aboutPage = document.querySelector(".About-page");
 let landingPage = document.querySelector(".landing-page");
-let ProjectsPage = document.querySelector(".projects-page");
+let ProjectsPage1 = document.querySelector(".project-page1");
+let ProjectsPage2 = document.querySelector(".project-page2");
+let contactPage = document.querySelector(".contact-page");
 let mouseHoverclass;
 console.log(landingPage);
 const Cursor = (e) => {
@@ -29,14 +31,39 @@ landingPage.addEventListener("mouseover", () => {
   mouseCursor.style.borderColor = "var(--pink)";
   smallCursor.style.borderColor = "var(--cream)";
   mouseHoverclass = "link-grow";
+  navLinks.forEach((link) => {
+    link.style.color = "var(--cream)";
+  });
 });
 aboutPage.addEventListener("mouseover", () => {
   mouseCursor.style.borderColor = "var(--cream)";
   smallCursor.style.borderColor = "var(--blue)";
   mouseHoverclass = "cursor-bg";
+  navLinks.forEach((link) => {
+    link.style.color = "var(--blue)";
+  });
 });
-ProjectsPage.addEventListener("mouseover", () => {
+ProjectsPage1.addEventListener("mouseover", () => {
   mouseCursor.style.borderColor = "var(--pink)";
   smallCursor.style.borderColor = "var(--cream)";
   mouseHoverclass = "link-grow";
+  navLinks.forEach((link) => {
+    link.style.color = "var(--cream)";
+  });
+});
+ProjectsPage2.addEventListener("mouseover", () => {
+  mouseCursor.style.borderColor = "var(--pink)";
+  smallCursor.style.borderColor = "var(--cream)";
+  mouseHoverclass = "link-grow";
+  navLinks.forEach((link) => {
+    link.style.color = "var(--cream)";
+  });
+});
+contactPage.addEventListener("mouseover", () => {
+  mouseCursor.style.borderColor = "var(--blue)";
+  smallCursor.style.borderColor = "var(--pink)";
+  mouseHoverclass = "grow";
+  navLinks.forEach((link) => {
+    link.style.color = "var(--blue)";
+  });
 });
