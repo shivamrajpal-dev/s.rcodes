@@ -5,10 +5,11 @@
   font-family: "Playfair Display", serif;
   cursor: none;
   scroll-behavior: smooth;
-  --pink: #ff5959;
-  --blue: #000324;
-  --cream: #fff8e8;
+  --pink: rgb(51, 250, 250);
+  --blue: rgb(18, 32, 32);
+  --cream: #fff8e9;
 }
+
 .container {
   height: 100vh;
   width: 100vw;
@@ -110,8 +111,8 @@ nav .logo a {
   text-decoration: none;
 }
 .navLinks {
-  color: var(--cream);
   transition: 0.5s;
+  color: var(--cream);
 }
 
 nav ul {
@@ -123,7 +124,6 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: var(--cream);
   padding: 1.4rem;
   margin-left: 2rem;
 }
@@ -174,8 +174,9 @@ nav ul li a {
   font-weight: bolder;
   text-transform: uppercase;
   color: white;
-  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000,
-    0 0 80px #ff0000, 0 0 120px #ff0000;
+  text-shadow: 0 0 10px rgb(51, 250, 250), 0 0 20px rgb(51, 250, 250),
+    0 0 40px rgb(51, 250, 250), 0 0 80px rgb(51, 250, 250),
+    0 0 120px rgb(51, 250, 250);
 }
 
 @keyframes textAnimation {
@@ -188,7 +189,7 @@ nav ul li a {
   80%,
   90.1%,
   92% {
-    color: #fcc7c7;
+    color: rgb(87, 130, 130);
     text-shadow: none;
   }
   18.1%,
@@ -202,12 +203,13 @@ nav ul li a {
   92.1%,
   100% {
     color: white;
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000,
-      0 0 80px #ff0000, 0 0 120px #ff0000;
+    text-shadow: 0 0 10px rgb(51, 250, 250), 0 0 20px rgb(51, 250, 250),
+      0 0 40px rgb(51, 250, 250), 0 0 80px rgb(51, 250, 250),
+      0 0 120px rgb(51, 250, 250);
   }
 }
 .tagLine {
-  font-size: 3.3rem;
+  font-size: 3rem;
   color: var(--cream);
   width: 70%;
   letter-spacing: 0.5rem;
@@ -216,7 +218,7 @@ nav ul li a {
 .arrows {
   display: flex;
   flex-direction: column;
-
+  padding: 1rem;
   justify-content: start;
   position: absolute;
   bottom: 2vh;
@@ -224,11 +226,13 @@ nav ul li a {
 
 .arrows .arrow {
   width: 2.2rem;
-  margin-top: -50px;
+  height: 2rem;
   animation: arrowAnimation 1s infinite;
   animation-timing-function: ease;
 }
-
+.arrows:hover .arrow {
+  animation: none;
+}
 .arrows .arrow:nth-child(1) {
   animation-delay: -0.6s;
 }
@@ -332,14 +336,13 @@ nav ul li a {
 .projectContainer .projectimg img {
   width: 90%;
 }
-/* .projectDescription {
-  text-align: center;
-} */
+
 .projectDescription h3 {
   font-size: 3rem;
   color: var(--pink);
   margin-top: 20%;
   text-align: center;
+  text-transform: uppercase;
 }
 .projectDescription p {
   font-size: 1.4rem;
@@ -347,6 +350,16 @@ nav ul li a {
   margin-top: 10%;
   text-align: justify;
 }
+.demo a {
+  text-decoration: none;
+  color: var(--pink);
+  padding: 1rem;
+}
+.demo a:hover {
+  text-shadow: 0 0 10px rgb(51, 250, 250), 0 0 40px rgb(51, 250, 250),
+    0 0 120px rgb(51, 250, 250);
+}
+
 .contact-page {
   height: 100vh;
   width: 100vw;
@@ -355,4 +368,303 @@ nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--blue);
+}
+.contactContainer {
+  width: 80%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contactDescription {
+  width: 30%;
+  height: 100%;
+  color: var(--blue);
+  display: flex;
+  flex-direction: column;
+}
+.contactDescription h1 {
+  font-size: 2rem;
+}
+.contactDescription p {
+  margin-top: 10%;
+  font-size: 1rem;
+}
+.contactForm {
+  width: 70%;
+  height: 90%;
+  color: var(--blue);
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 80%;
+  height: 80%;
+}
+.labelAnim {
+  position: relative;
+  width: 45%;
+  height: 3.5rem;
+  overflow: hidden;
+}
+form .labelAnim input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding-top: 20px;
+  background: transparent;
+  outline: none;
+}
+form .labelAnim label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid var(--blue);
+}
+
+form .labelAnim label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  bottom: -2px;
+  border-bottom: 4px solid var(--pink);
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  left: 0px;
+  bottom: 2px;
+  transition: all 0.3s ease;
+}
+
+form .labelAnim input:focus + label .content-name,
+form .labelAnim input:valid + label .content-name {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: var(--pink);
+}
+
+form .labelAnim input:focus + label::after,
+form .labelAnim input:valid + label::after {
+  transform: translateX(0%);
+}
+.inputContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+.inputContainer button {
+  background-color: var(--pink);
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+.inputContainer button svg {
+  width: 3.9rem;
+}
+
+.inputContainer button:hover {
+  border-radius: 30%;
+  background-color: var(--blue);
+  transform: scale(1.2);
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  nav .logo {
+    font-size: 1rem;
+  }
+  nav ul {
+    font-size: 0.7rem;
+  }
+  nav ul li a {
+    padding: unset;
+  }
+  .cursor {
+    display: none;
+  }
+  .smallCursor {
+    display: none;
+  }
+  .landing-page-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+  .introLine {
+    font-size: 0.9rem;
+    color: #fff5de;
+    width: 80%;
+    letter-spacing: 0.2rem;
+    margin-bottom: 3rem;
+    text-align: justify;
+  }
+  .tagLine {
+    font-size: 1.3rem;
+    color: var(--cream);
+    width: 80%;
+    letter-spacing: 0.5rem;
+    margin-bottom: 3rem;
+  }
+  .arrows {
+    bottom: 4vh;
+  }
+  .arrows .arrow {
+    width: 2rem;
+  }
+  .animImg {
+    position: absolute;
+    bottom: -5%;
+    right: -20%;
+    animation: circular 20s infinite;
+    animation-timing-function: linear;
+    width: 60%;
+  }
+  .aboutContainer {
+    height: 90%;
+    width: 90%;
+  }
+  .whyContainer {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    margin-top: 2rem;
+  }
+  .whyContainer h2 {
+    font-size: 1.5rem;
+  }
+  .whyContainer p {
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .processContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+  }
+  .process {
+    width: 100%;
+
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .process h5 {
+    font-size: 1.2rem;
+  }
+  .process p {
+    margin-top: unset;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  .projectContainer {
+    width: 90%;
+    height: 85%;
+
+    flex-direction: column;
+  }
+  .projectContainer .left {
+    width: 100%;
+    height: 50%;
+  }
+  .projectContainer .right {
+    width: 100%;
+    height: 50%;
+  }
+  .projectContainer .projectimg {
+    width: 100%;
+  }
+  .projectDescription h3 {
+    margin-top: unset;
+    font-size: 1.4rem;
+    color: var(--pink);
+    text-align: center;
+  }
+  .projectDescription p {
+    font-size: 1rem;
+    color: var(--cream);
+    margin-top: 10%;
+    text-align: justify;
+  }
+  .demo a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--pink);
+    padding: 1rem;
+  }
+  .contactContainer {
+    width: 90%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contactDescription {
+    width: 100%;
+    height: 20%;
+    color: var(--blue);
+    display: flex;
+    flex-direction: column;
+  }
+  .contactDescription h1 {
+    font-size: 1.5rem;
+  }
+  .contactDescription p {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  .contactForm {
+    width: 100%;
+    height: 80%;
+    color: var(--blue);
+    font-size: 1rem;
+  }
+  form {
+    width: 100%;
+    height: 100%;
+  }
+  .inputContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: unset;
+  }
+  .labelAnim {
+    position: relative;
+    width: 100%;
+    height: 3.5rem;
+    overflow: hidden;
+    margin-top: 1rem;
+  }
+  .inputContainer button {
+    margin-top: 2rem;
+    align-self: flex-end;
+  }
 }
