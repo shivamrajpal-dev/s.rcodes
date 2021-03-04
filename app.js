@@ -8,7 +8,13 @@ let ProjectsPage2 = document.querySelector(".project-page2");
 let contactPage = document.querySelector(".contact-page");
 let button = document.querySelector("#button");
 let svg = document.querySelector("#svg");
+let menubar = document.querySelector(".menu-toogle");
+let menupage = document.querySelector(".nav-links-list");
 let mouseHoverclass;
+
+menubar.addEventListener("click", () => {
+  menupage.classList.toggle("active-list");
+});
 let linkcolor;
 console.log(landingPage);
 const Cursor = (e) => {
